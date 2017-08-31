@@ -1,0 +1,289 @@
+s4爬虫x4
+
+
+
+内容回顾：
+	requests
+	beautifulsoup
+	Web知识：
+		- 请求头和请求体
+		- cookies
+		- csrf
+		- 常用请求头：
+			- user-agent: 设备信息
+			- content-type: 
+			- referer
+			- host: ...
+	Web微信：
+		- 检测网络请求
+		- 尝试
+	
+	高性能相关：
+		- 串行
+		- 线程池，进程池
+		- 异步非阻塞
+			- asycio
+			- gevent
+			- twisted
+			- tornado
+		  PS: 协程
+		  
+今日内容：
+	- 史上最牛逼的异步IO模块
+	- scrapy框架
+	
+1. 可能是史上最牛逼的异步IO模块
+	知识必备：
+		a. socket客户端
+			obj = socket()
+			# obj.connect((198.1.1.1,80))
+			obj.connect((http://dig.chouti.com/,80)) # 阻塞
+			
+			
+			obj.send('GET /index http1.1\r\nhost:...\r\ncontent-type:xxxxx\r\n\r\n')
+			
+			obj.recv(1024) # 最多接收字节 # 阻塞
+			
+			
+			obj.close()
+			
+			
+			
+			示例：
+				import socket
+
+				client = socket.socket()
+				# 连接
+				client.connect(("43.226.160.17",80)) # 阻塞
+
+				# 发送请求
+				data = b"GET / HTTP/1.0\r\nhost: dig.chouti.com\r\n\r\n"
+				client.sendall(data)
+
+
+				response = client.recv(8096) # 阻塞
+				print(response)
+
+				client.close()
+			
+			总结：
+				发送Http请求
+				非阻塞，报错 try
+				定义一些操作
+				
+				
+		b. IO多路复用，用来检测【多个】socket对象是否有变化？
+			
+			socket_list = []
+				
+			for i in [www.baid.......,.....]
+			
+				client = socket.socket()
+				client.setblocking(False)
+				# 连接
+				try:
+					client.connect((i,80)) # 连接的请求已经发送出去，
+				except BlockingIOError as e:
+					print(e)
+				socket_list.append(client)
+		
+			
+			# 事件循环
+			while True:
+				r,w,e = select.select(socket_list,socket_list,[],0.05)
+				# w, 是什么？[sk2,sk3]，连接成功了
+				for obj in w:
+					obj.send("GET / http/1.0\....")
+				# r，是什么？ [sk2,sk3], 要收数据了
+				for obj in r:
+					response = obj.recv(...)
+					print(response)
+							   
+				
+			知识点：
+				client.setblocking(False)
+				select.select检测：连接成功，数据回来了 
+				
+				
+				
+				
+		模块：
+			import socket
+			import select
+
+			class Request(object):
+				def __init__(self,sock,info):
+					self.sock = sock
+					self.info = info
+
+				def fileno(self):
+					return self.sock.fileno()
+
+
+			class QinBing(object):
+				def __init__(self):
+					self.sock_list = []
+					self.conns = []
+
+				def add_request(self,req_info):
+					"""
+					创建请求
+					 req_info: {'host': 'www.baidu.com', 'port': 80, 'path': '/'},
+					:return:
+					"""
+					sock = socket.socket()
+					sock.setblocking(False)
+					try:
+						sock.connect((req_info['host'],req_info['port']))
+					except BlockingIOError as e:
+						pass
+
+					obj = Request(sock,req_info)
+					self.sock_list.append(obj)
+					self.conns.append(obj)
+
+				def run(self):
+					"""
+					开始事件循环,检测：连接成功？数据是否返回？
+					:return:
+					"""
+					while True:
+						# select.select([socket对象,])
+						# 可是任何对象，对象一定要fileno方法
+						# 对象.fileno()
+						# select.select([request对象,])
+						r,w,e = select.select(self.sock_list,self.conns,[],0.05)
+						# w,是否连接成功
+						for obj in w:
+							# 检查obj:request对象
+							# socket, {'host': 'www.baidu.com', 'port': 80, 'path': '/'},
+							data = "GET %s http/1.1\r\nhost:%s\r\n\r\n" %(obj.info['path'],obj.info['host'])
+							obj.sock.send(data.encode('utf-8'))
+							self.conns.remove(obj)
+						# 数据返回，接收到数据
+						for obj in r:
+							response = obj.sock.recv(8096)
+							obj.info['callback'](response)
+							self.sock_list.remove(obj)
+
+
+						# 所有请求已经返回
+						if not self.sock_list:
+							break
+
+				
+			
+				使用：
+					from .qb import QinBing
+
+
+					def done1(response):
+						print(response)
+
+					def done2(response):
+						print(response)
+
+					url_list = [
+						{'host': 'www.baidu.com', 'port': 80, 'path': '/','callback': done1},
+						{'host': 'www.cnblogs.com', 'port': 80, 'path': '/index.html','callback': done2},
+						{'host': 'www.bing.com', 'port': 80, 'path': '/','callback': done2},
+					]
+
+					qinbing = QinBing()
+					for item in url_list:
+						qinbing.add_request(item)
+
+					qinbing.run()
+				
+				
+			Twisted,Tornado
+				
+		  
+		**********必须知道**********
+		
+		
+
+		
+2. Scrapy框架
+	功能：
+		- 应用twisted，下载页面
+		- HTML解析对象
+		- 代理
+		- 延迟下载
+		- 去重
+		- 深度（5），广度
+		...
+	猜想：
+		起始URL
+		下载页面
+			- 持久化
+			- 继续下载
+		调度器
+		
+	安装：
+		Linux:
+			pip3 install scrapy 
+		
+		Windows:
+			pip3 install wheel
+			D:twisted.wheel
+			pip3 install D:twisted.wheel
+			
+			pip3 install scrapy 报错：twisted安装错误
+			
+			pywin32
+	
+		
+		PS: 
+			- python3对twisted未完全支持
+			- python2
+		
+		import scrapy
+	
+		
+	使用：
+		Django:
+			django-admin startproject mysite
+			cd mysite
+			python manage.py startapp app01
+			
+		
+		Scrapy
+			# 创建项目
+			scrapy startproject sp1
+			
+			sp1
+				- sp1
+					- spiders目录
+					- middlewares.py	中间件
+					- items.py			格式化
+					- pipelines.py		持久化
+					- settings.py		配置文件
+				- scrapy.cfg 			配置
+			
+			# 创建爬虫
+			cd sp1
+			scrapy genspider example example.com
+		
+			# 执行爬虫，进入project
+			scrapy crawl baidu
+			scrapy crawl baidu --nolog
+			
+	基本操作：
+		1. selector
+		
+				hxs = Selector(response=response)
+				# print(hxs)
+				user_list = hxs.xpath('//div[@class="item masonry_brick"]')
+				for item in user_list:
+					price = item.xpath('./span[@class="price"]/text()').extract_first()
+					url = item.xpath('div[@class="item_t"]/div[@class="class"]//a/@href').extract_first()
+					print(price,url)
+
+				result = hxs.xpath('/a[re:test(@href,"http://www.xiaohuar.com/list-1-\d+.html")]/@href')
+				print(result)
+				result = ['http://www.xiaohuar.com/list-1-1.html','http://www.xiaohuar.com/list-1-2.html']
+				
+		2. yield Request(url=url,callback=self.parse)
+		
+练习题：抽屉，煎蛋

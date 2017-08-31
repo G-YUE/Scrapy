@@ -1,0 +1,426 @@
+﻿2017-08-31 20:23:53 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: sp1)
+2017-08-31 20:23:53 [scrapy.utils.log] INFO: Overridden settings: {'BOT_NAME': 'sp1', 'DEPTH_LIMIT': 2, 'LOG_FILE': 'log.txt', 'NEWSPIDER_MODULE': 'sp1.spiders', 'SPIDER_MODULES': ['sp1.spiders']}
+2017-08-31 20:23:53 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2017-08-31 20:23:54 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-08-31 20:23:54 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-08-31 20:23:54 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-08-31 20:23:54 [scrapy.core.engine] INFO: Spider opened
+2017-08-31 20:23:54 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-08-31 20:23:54 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-08-31 20:23:55 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://jandan.net/ooxx> from <GET http://jandan.net/ooxx/>
+2017-08-31 20:23:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jandan.net/ooxx> (referer: None)
+2017-08-31 20:23:55 [py.warnings] WARNING: C:\Users\YUE\Desktop\笔记\notes\爬虫框架\Scrapy\sp1\sp1\spiders\jiandan.py:14: ScrapyDeprecationWarning: scrapy.selector.HtmlXPathSelector is deprecated, instantiate scrapy.Selector instead.
+  xsm = HtmlXPathSelector(response)
+
+2017-08-31 20:23:55 [py.warnings] WARNING: C:\Users\YUE\Desktop\笔记\notes\爬虫框架\Scrapy\sp1\sp1\spiders\jiandan.py:16: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  img_list = xsm.select("//div[@class='text']//a[@class='view_img_link']/@href").extract()
+
+2017-08-31 20:23:55 [py.warnings] WARNING: c:\python33\lib\site-packages\parsel\selector.py:234: ScrapyDeprecationWarning: scrapy.selector.HtmlXPathSelector is deprecated, instantiate scrapy.Selector instead.
+  for x in result]
+
+2017-08-31 20:24:20 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fhlv4pnvfxj30qo0qoqa7.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:24:30 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx1.sinaimg.cn/large/0065BKd5gy1fhp60fkmmbj30qq0zk0yz.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:24:30 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fhlv4pnvfxj30qo0qoqa7.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:24:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fhmqzmgxdnj30qo0qo0vq.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:24:35 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhrehhiq2wg30f009zdia.gif> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:24:40 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx1.sinaimg.cn/large/0065BKd5gy1fhp60fkmmbj30qq0zk0yz.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:24:40 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fhsrwpo1foj30br0kugux.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:24:40 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fhlv4pnvfxj30qo0qoqa7.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:24:40 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fhlv4pnvfxj30qo0qoqa7.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:24:45 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhrehhiq2wg30f009zdia.gif> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:24:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fhrvrz99g0j30dw0afgnt.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:24:45 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhsrx17uhwj30h00h0dgu.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:24:45 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx3.sinaimg.cn/large/0065BKd5gy1fhlv4pnvfxj30qo0qoqa7.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:24:50 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx1.sinaimg.cn/large/0065BKd5gy1fhp60fkmmbj30qq0zk0yz.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:24:50 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx1.sinaimg.cn/large/0065BKd5gy1fhp60fkmmbj30qq0zk0yz.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:24:50 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhsrzlazigj30zk1em14h.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:24:50 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fhsrwpo1foj30br0kugux.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:24:55 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhsrx17uhwj30h00h0dgu.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:24:55 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhrehhiq2wg30f009zdia.gif> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:24:55 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhrehhiq2wg30f009zdia.gif> (referer: http://jandan.net/ooxx)
+2017-08-31 20:24:55 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx1.sinaimg.cn/large/0065BKd5gy1fhw4kcy37fj30go0m876a.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:24:55 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx1.sinaimg.cn/large/0065BKd5gy1fhp60fkmmbj30qq0zk0yz.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:24:55 [scrapy.extensions.logstats] INFO: Crawled 6 pages (at 6 pages/min), scraped 0 items (at 0 items/min)
+2017-08-31 20:25:00 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fik59vnictj30zk0qoajg.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:25:00 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhw4klos54j30q90zk7am.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:25:00 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fhsrwpo1foj30br0kugux.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:25:00 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fhsrwpo1foj30br0kugux.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:25:00 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx2.sinaimg.cn/large/0065BKd5gy1fhrehhiq2wg30f009zdia.gif>: HTTP status code is not handled or not allowed
+2017-08-31 20:25:05 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhsrx17uhwj30h00h0dgu.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:25:05 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhsrx17uhwj30h00h0dgu.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:25:05 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx1.sinaimg.cn/large/0065BKd5gy1fhw4kcy37fj30go0m876a.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:25:05 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx1.sinaimg.cn/large/0065BKd5gy1fhw4kvhug3j30k00zk78j.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:25:05 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx3.sinaimg.cn/large/0065BKd5gy1fhsrwpo1foj30br0kugux.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:25:10 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fik59vnictj30zk0qoajg.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:25:10 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1filktkk4zmj30zk1cgtja.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:25:10 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhw4klos54j30q90zk7am.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:25:10 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhsrzlazigj30zk1em14h.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:25:10 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx2.sinaimg.cn/large/0065BKd5gy1fhsrx17uhwj30h00h0dgu.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:25:15 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx1.sinaimg.cn/large/0065BKd5gy1fhw4kcy37fj30go0m876a.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:25:15 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx1.sinaimg.cn/large/0065BKd5gy1fhw4kcy37fj30go0m876a.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:25:15 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx1.sinaimg.cn/large/0065BKd5gy1fhw4kvhug3j30k00zk78j.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:25:15 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1filktk2yvxj30zk18nk0v.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:25:20 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhw4klos54j30q90zk7am.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:25:20 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhw4klos54j30q90zk7am.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:25:20 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fik59vnictj30zk0qoajg.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:25:20 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fik59vnictj30zk0qoajg.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:25:20 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fin370ek1cj30f00ir0vl.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:25:20 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhsrzlazigj30zk1em14h.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:25:20 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhsrzlazigj30zk1em14h.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:25:20 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx1.sinaimg.cn/large/0065BKd5gy1fhw4kcy37fj30go0m876a.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:25:25 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2017-08-31 20:25:25 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx1.sinaimg.cn/large/0065BKd5gy1fhw4kvhug3j30k00zk78j.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:25:25 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx1.sinaimg.cn/large/0065BKd5gy1fhw4kvhug3j30k00zk78j.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:25:25 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fip3np0rwnj30dw0ista6.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:25:25 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2017-08-31 20:25:25 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx2.sinaimg.cn/large/0065BKd5gy1fhw4klos54j30q90zk7am.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:25:25 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx2.sinaimg.cn/large/0065BKd5gy1fik59vnictj30zk0qoajg.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:25:25 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx2.sinaimg.cn/large/0065BKd5gy1fhsrzlazigj30zk1em14h.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:25:26 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2017-08-31 20:26:34 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: sp1)
+2017-08-31 20:26:34 [scrapy.utils.log] INFO: Overridden settings: {'BOT_NAME': 'sp1', 'LOG_FILE': 'log.txt', 'NEWSPIDER_MODULE': 'sp1.spiders', 'SPIDER_MODULES': ['sp1.spiders']}
+2017-08-31 20:26:34 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2017-08-31 20:26:36 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-08-31 20:26:36 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-08-31 20:26:36 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-08-31 20:26:36 [scrapy.core.engine] INFO: Spider opened
+2017-08-31 20:26:36 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-08-31 20:26:36 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-08-31 20:26:36 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://jandan.net/ooxx> from <GET http://jandan.net/ooxx/>
+2017-08-31 20:26:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jandan.net/ooxx> (referer: None)
+2017-08-31 20:26:36 [py.warnings] WARNING: C:\Users\YUE\Desktop\笔记\notes\爬虫框架\Scrapy\sp1\sp1\spiders\jiandan.py:14: ScrapyDeprecationWarning: scrapy.selector.HtmlXPathSelector is deprecated, instantiate scrapy.Selector instead.
+  xsm = HtmlXPathSelector(response)
+
+2017-08-31 20:26:36 [py.warnings] WARNING: C:\Users\YUE\Desktop\笔记\notes\爬虫框架\Scrapy\sp1\sp1\spiders\jiandan.py:16: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  img_list = xsm.select("//div[@class='text']//a[@class='view_img_link']/@href").extract()
+
+2017-08-31 20:26:36 [py.warnings] WARNING: c:\python33\lib\site-packages\parsel\selector.py:234: ScrapyDeprecationWarning: scrapy.selector.HtmlXPathSelector is deprecated, instantiate scrapy.Selector instead.
+  for x in result]
+
+2017-08-31 20:26:36 [py.warnings] WARNING: C:\Users\YUE\Desktop\笔记\notes\爬虫框架\Scrapy\sp1\sp1\spiders\jiandan.py:34: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  next_url=xsm.select("//div[@class='comments']//div[@class='cp-pagenavi']//a[@class='previous-comment-page']/@href").extract_first()
+
+2017-08-31 20:26:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jandan.net/ooxx/page-298#comments> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:46 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1filktkk4zmj30zk1cgtja.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:46 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiqafbz1bxj30of10nn13.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:46 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fikq9gxlltj30zk1bfk4p.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:46 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fip3np0rwnj30dw0ista6.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:46 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fhmqzmgxdnj30qo0qo0vq.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:46 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fin370ek1cj30f00ir0vl.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:46 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1filktk2yvxj30zk18nk0v.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:46 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fhlv4pnvfxj30qo0qoqa7.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:46 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fhrvrz99g0j30dw0afgnt.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:46 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fhsrwpo1foj30br0kugux.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fhlv4pnvfxj30qo0qoqa7.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1filktk2yvxj30zk18nk0v.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fhmqzmgxdnj30qo0qo0vq.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fin370ek1cj30f00ir0vl.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fip3np0rwnj30dw0ista6.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/0065BKd5gy1fhw4kcy37fj30go0m876a.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhrehhiq2wg30f009zdia.gif> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/0065BKd5gy1fhw4kvhug3j30k00zk78j.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fiqj45ipi5j30zk1hcaq3.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fhsrwpo1foj30br0kugux.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fj0gwry8ktj30p00zk7au.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiyg5vlssej30u00y4wka.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fiyg35iox5j30u011in89.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiyg2tdp0mj30go0uodip.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiwe648ngij30np0zktcb.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fiv434q12gj30k00jpb1p.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiut14jtolj30xc1e0qcu.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiu5workc7j30u011item.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fixvob3et5j30ku0kugog.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fitq412g9wj30u00k0dl2.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fitc5nrvkaj30dw0ij0v9.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fitc6a86wuj30dp0kuq5k.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fise03mpzcj30xc0p0782.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fis6f83fo8j30qn0zk43q.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fis9pmua26j30ro1d6gv2.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1firtw07kp8j30f00f0ta9.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fiqn8w7vs7j30zk1hc486.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fiqn8w7vs7j30zk1hc486.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1firtw07kp8j30f00f0ta9.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fis9pmua26j30ro1d6gv2.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fis6f83fo8j30qn0zk43q.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fise03mpzcj30xc0p0782.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fitc6a86wuj30dp0kuq5k.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fitc5nrvkaj30dw0ij0v9.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fitq412g9wj30u00k0dl2.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fixvob3et5j30ku0kugog.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiu5workc7j30u011item.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiut14jtolj30xc1e0qcu.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fiv434q12gj30k00jpb1p.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiwe648ngij30np0zktcb.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiyg2tdp0mj30go0uodip.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fiyg35iox5j30u011in89.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiyg5vlssej30u00y4wka.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fiqj45ipi5j30zk1hcaq3.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fj0gwry8ktj30p00zk7au.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fhrvrz99g0j30dw0afgnt.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fikq9gxlltj30zk1bfk4p.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiqafbz1bxj30of10nn13.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1filktkk4zmj30zk1cgtja.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiqafbz1bxj30of10nn13.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiqafbz1bxj30of10nn13.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1filktkk4zmj30zk1cgtja.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx3.sinaimg.cn/large/0065BKd5gy1filktkk4zmj30zk1cgtja.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fikq9gxlltj30zk1bfk4p.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fikq9gxlltj30zk1bfk4p.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fhrvrz99g0j30dw0afgnt.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fhrvrz99g0j30dw0afgnt.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fj0gwry8ktj30p00zk7au.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fj0gwry8ktj30p00zk7au.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fiqj45ipi5j30zk1hcaq3.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fiqj45ipi5j30zk1hcaq3.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiyg5vlssej30u00y4wka.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiyg5vlssej30u00y4wka.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fiyg35iox5j30u011in89.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fiyg35iox5j30u011in89.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiyg2tdp0mj30go0uodip.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiyg2tdp0mj30go0uodip.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiwe648ngij30np0zktcb.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiwe648ngij30np0zktcb.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fiv434q12gj30k00jpb1p.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fiv434q12gj30k00jpb1p.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiut14jtolj30xc1e0qcu.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiut14jtolj30xc1e0qcu.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx3.sinaimg.cn/large/0065BKd5gy1fiqafbz1bxj30of10nn13.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx3.sinaimg.cn/large/0065BKd5gy1filktkk4zmj30zk1cgtja.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fixvob3et5j30ku0kugog.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fixvob3et5j30ku0kugog.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiu5workc7j30u011item.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fiu5workc7j30u011item.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx4.sinaimg.cn/large/0065BKd5gy1fikq9gxlltj30zk1bfk4p.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx4.sinaimg.cn/large/0065BKd5gy1fhrvrz99g0j30dw0afgnt.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fitq412g9wj30u00k0dl2.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fitq412g9wj30u00k0dl2.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fitc5nrvkaj30dw0ij0v9.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fitc5nrvkaj30dw0ij0v9.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx3.sinaimg.cn/large/0065BKd5gy1fj0gwry8ktj30p00zk7au.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx4.sinaimg.cn/large/0065BKd5gy1fiqj45ipi5j30zk1hcaq3.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fitc6a86wuj30dp0kuq5k.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fitc6a86wuj30dp0kuq5k.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fise03mpzcj30xc0p0782.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fise03mpzcj30xc0p0782.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx3.sinaimg.cn/large/0065BKd5gy1fiyg5vlssej30u00y4wka.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx4.sinaimg.cn/large/0065BKd5gy1fiyg35iox5j30u011in89.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fis6f83fo8j30qn0zk43q.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fis6f83fo8j30qn0zk43q.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx3.sinaimg.cn/large/0065BKd5gy1fiyg2tdp0mj30go0uodip.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx3.sinaimg.cn/large/0065BKd5gy1fiwe648ngij30np0zktcb.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fis9pmua26j30ro1d6gv2.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fis9pmua26j30ro1d6gv2.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1firtw07kp8j30f00f0ta9.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx3.sinaimg.cn/large/0065BKd5gy1firtw07kp8j30f00f0ta9.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx4.sinaimg.cn/large/0065BKd5gy1fiv434q12gj30k00jpb1p.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx3.sinaimg.cn/large/0065BKd5gy1fiut14jtolj30xc1e0qcu.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fiqn8w7vs7j30zk1hc486.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fiqn8w7vs7j30zk1hc486.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx4.sinaimg.cn/large/0065BKd5gy1fixvob3et5j30ku0kugog.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fhsrwpo1foj30br0kugux.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fhsrwpo1foj30br0kugux.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx3.sinaimg.cn/large/0065BKd5gy1fiu5workc7j30u011item.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx4.sinaimg.cn/large/0065BKd5gy1fitq412g9wj30u00k0dl2.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fip3np0rwnj30dw0ista6.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fip3np0rwnj30dw0ista6.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx4.sinaimg.cn/large/0065BKd5gy1fitc5nrvkaj30dw0ij0v9.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fin370ek1cj30f00ir0vl.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fin370ek1cj30f00ir0vl.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jandan.net/ooxx/page-297#comments> (referer: http://jandan.net/ooxx/page-298)
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx4.sinaimg.cn/large/0065BKd5gy1fitc6a86wuj30dp0kuq5k.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx3.sinaimg.cn/large/0065BKd5gy1fise03mpzcj30xc0p0782.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1filktk2yvxj30zk18nk0v.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx3.sinaimg.cn/large/0065BKd5gy1filktk2yvxj30zk18nk0v.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fhmqzmgxdnj30qo0qo0vq.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fhmqzmgxdnj30qo0qo0vq.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx4.sinaimg.cn/large/0065BKd5gy1fis6f83fo8j30qn0zk43q.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fhlv4pnvfxj30qo0qoqa7.jpg> (failed 3 times): 502 Bad Gateway
+2017-08-31 20:26:57 [scrapy.core.engine] DEBUG: Crawled (502) <GET http://wx3.sinaimg.cn/large/0065BKd5gy1fhlv4pnvfxj30qo0qoqa7.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx4.sinaimg.cn/large/0065BKd5gy1fis9pmua26j30ro1d6gv2.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx3.sinaimg.cn/large/0065BKd5gy1firtw07kp8j30f00f0ta9.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx4.sinaimg.cn/large/0065BKd5gy1fiqn8w7vs7j30zk1hc486.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx3.sinaimg.cn/large/0065BKd5gy1fhsrwpo1foj30br0kugux.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx3.sinaimg.cn/large/0065BKd5gy1fip3np0rwnj30dw0ista6.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx3.sinaimg.cn/large/0065BKd5gy1fin370ek1cj30f00ir0vl.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx3.sinaimg.cn/large/0065BKd5gy1filktk2yvxj30zk18nk0v.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:26:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx4.sinaimg.cn/large/0065BKd5gy1fhmqzmgxdnj30qo0qo0vq.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:27:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhsrx17uhwj30h00h0dgu.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhw4klos54j30q90zk7am.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:07 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <502 http://wx3.sinaimg.cn/large/0065BKd5gy1fhlv4pnvfxj30qo0qoqa7.jpg>: HTTP status code is not handled or not allowed
+2017-08-31 20:27:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/0065BKd5gy1fhp60fkmmbj30qq0zk0yz.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/0065BKd5gy1fipjbdoc4nj30u011htfj.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fiv3nn68anj30k00qo76h.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fik59vnictj30zk0qoajg.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fiwe510aivj30u011etcg.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:07 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/006HcaCrly1fj2x6fi9a6j30i40kbdhj.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:27:07 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/661eb95cly1fj1whuiysxj20u00yjtax.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:27:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fiyq9mictlj30zk0jzwiw.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fiza1io983j30zk0qo442.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:08 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/66d769e7gy1fj2zp4bec6j20k00zktov.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:27:08 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/66d769e7gy1fj2zpgh0ppj20ev0p6tbs.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:27:08 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/a2edc015ly1fj30ggk309j20gq0m8400.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:27:08 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/661eb95cly1fj1whwfdvxj20go09ewfd.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:27:08 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/661eb95cly1fj1whx1jtqj20go0cit9d.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:27:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jandan.net/ooxx/page-296#comments> (referer: http://jandan.net/ooxx/page-297)
+2017-08-31 20:27:08 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/a82b014bgy1fj33fddoh0j20hb0q9wfu.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:27:08 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/a82b014bly1ffpv2akwqrj20k90rsac8.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:27:08 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/0065BKd5gy1fj0gwqs87zj30zk0qpahn.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:27:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws2.sinaimg.cn/large/006HcaCrly1fj2x4xycltj30ib0fywg9.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/661eb95cly1fj1whxoi44j20go0ezjry.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws2.sinaimg.cn/large/006HcaCrly1fj2x5jjtm4j30im0dy75r.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws4.sinaimg.cn/large/006HcaCrly1fj2x5951abj30hs0hp0u6.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/0065BKd5gy1fitq3mn1ecj30zk0qoq9p.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fhsrzlazigj30zk1em14h.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/006HcaCrly1fj2x6se2ftj30qb0qbgo2.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/006EDGCygy1fj2zlomjtgj30gt0lxmzo.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/0065BKd5gy1fiqj4glwwvj30of10kq9k.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/661eb95cly1fj1wht9l0qj20kg0pktae.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fiu5wamwbhj30p90zkjve.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fj0wlxlo9bj30p10zkwk3.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:18 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/006D2KSdly1fj2jzwo56ij31gg0tkx6p.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:27:18 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/006HcaCrgy1fj2ijycmg1j30il0ikdho.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:27:18 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/91e9ebb3gy1fiw2uwv59ig209x05kb29.gif> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:27:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws3.sinaimg.cn/large/006HcaCrly1fj2x5t6p69j30cr18gadn.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jandan.net/ooxx/page-295#comments> (referer: http://jandan.net/ooxx/page-296)
+2017-08-31 20:27:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/006HcaCrgy1fj2rcwrrrjj30ch0dc0t5.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/006HcaCrgy1fj2rcaner3j30iw0iv0u6.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/a82b014bly1ffohu74f9wj20oz0goq61.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws4.sinaimg.cn/large/006HcaCrly1fj2x65vzgwj30f00ezahu.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/006HcaCrgy1fj2rdg0ohwj30gg0gftb2.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:27:36 [scrapy.extensions.logstats] INFO: Crawled 63 pages (at 63 pages/min), scraped 0 items (at 0 items/min)
+2017-08-31 20:27:50 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx1.sinaimg.cn/large/006UEPpXgy1fj23gknquvg30ak05ye82.gif> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2017-08-31 20:27:50 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx1.sinaimg.cn/large/661eb95cly1fj1whstd98j20sg0ryhdh.jpg> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2017-08-31 20:28:11 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://ws2.sinaimg.cn/large/006HcaCrgy1fj254mocg0j30fa0k4dgh.jpg> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2017-08-31 20:28:11 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx2.sinaimg.cn/large/57aa2bdfgy1fj25va51mfj20i20r37dl.jpg> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2017-08-31 20:28:11 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/006UEPpXgy1fj23fok5aig30ak05yx6r.gif> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2017-08-31 20:28:11 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/661eb95cly1fj1whs9ec7j20db0miact.jpg> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2017-08-31 20:28:11 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/006HcaCrgy1fj2i9hhoivj30b40etdgk.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:28:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws3.sinaimg.cn/large/006HcaCrgy1fj2ia4a4kuj30hs0hs759.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/006HcaCrgy1fj2i9qs15qj30g50c275b.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/006HcaCrgy1fj2iadrhd0j30hs0hs75m.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws2.sinaimg.cn/large/006HcaCrgy1fj2icr4mdbj30hs0hswgb.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/006HcaCrgy1fj2idbp8rfj30nw0zuwh3.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:13 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/006HcaCrgy1fj2idyw1aij30k00qotb2.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:28:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws1.sinaimg.cn/large/006HcaCrgy1fj2idmizxxj30k00qo40s.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:13 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/006HcaCrgy1fj2if0yc2ij30hs0hsgm2.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:28:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/006HcaCrgy1fj2iffr2gaj30dw0ijjtf.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws3.sinaimg.cn/large/006HcaCrgy1fj2ienpjo0j30hs0no0tz.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/006HcaCrgy1fj2ige9a1tj30dw0hm3zu.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws4.sinaimg.cn/large/006HcaCrgy1fj2rxiwx42j30dw09igmv.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws3.sinaimg.cn/large/57aa2bdfgy1fj25vovs7lj20m90xcjv7.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws1.sinaimg.cn/large/006HcaCrgy1fj2iibn29zj30dc0dbaa3.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws3.sinaimg.cn/large/006HcaCrgy1fj2ii1au9lj30ku0kuac2.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:18 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/006HcaCrgy1fj2ij3wujzj30iw0izwfs.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:28:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws1.sinaimg.cn/large/006HcaCrgy1fj2rw8nmhcj30dc0nq0y4.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws4.sinaimg.cn/large/006HcaCrgy1fj2rxt2fw3j30f60kqmyo.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:20 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://jandan.net/ooxx/page-294#comments> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2017-08-31 20:28:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws3.sinaimg.cn/large/006HcaCrgy1fj2iinnt00j30ku0kugoj.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:20 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/66d769e7gy1fj2vuhrq74j20f00qo47j.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:28:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/0062SqDFgy1fj2sib1h60j30gz0m8tjc.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws3.sinaimg.cn/large/006HcaCrgy1fj2rel17ckj30cw0f449u.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws3.sinaimg.cn/large/9f0e9ec6gy1fj2rlzhctvj20it0elwpy.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/0062SqDFgy1fj2sjvj2wsj30l50gy4d8.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:24 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1firkn0jrkej30uy1adgry.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:28:24 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/006HcaCrly1fj2x4oe8c2j30f008gq39.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:28:24 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/9ccd8aa6gy1fj33jzuz7jj20fe0kigm8.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:28:24 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/9ccd8aa6gy1fj33jzuz7jj20fe0kigm8.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:28:24 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/006HcaCrly1fj2x4oe8c2j30f008gq39.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:28:24 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0065BKd5gy1firkn0jrkej30uy1adgry.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:28:25 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/66d769e7gy1fj2vuhrq74j20f00qo47j.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:28:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/006HcaCrly1fj2x49v77gj308e0eiwf9.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jandan.net/ooxx/page-294#comments> (referer: http://jandan.net/ooxx/page-295)
+2017-08-31 20:28:25 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/006HcaCrgy1fj2ij3wujzj30iw0izwfs.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:28:35 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/006HcaCrgy1fj2idyw1aij30k00qotb2.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:28:35 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/006HcaCrgy1fj2if0yc2ij30hs0hsgm2.jpg> (failed 2 times): 502 Bad Gateway
+2017-08-31 20:28:35 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in http://wx2.sinaimg.cn/large/006EDGCygy1fj2zfkn3g0j31kw23vnpd.jpg. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2017-08-31 20:28:35 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx2.sinaimg.cn/large/006EDGCygy1fj2zfkn3g0j31kw23vnpd.jpg> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>, <twisted.python.failure.Failure twisted.web.http._DataLoss: >]
+2017-08-31 20:28:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jandan.net/ooxx/page-293#comments> (referer: http://jandan.net/ooxx/page-294)
+2017-08-31 20:28:35 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/661eb95cly1fj1whr57baj20zk1bf14x.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:28:35 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/006HcaCrgy1fj1x6ebit4j30jg0jgdi6.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:28:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws3.sinaimg.cn/large/006HcaCrgy1fj2ryc1nu2j30m80iudlw.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws4.sinaimg.cn/large/66d769e7gy1fj2vvd1wa8j21hc0u07ao.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws1.sinaimg.cn/large/66d769e7gy1fj2vv19zy8j20f00qodos.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/006HcaCrgy1fj2rvaddobj30em0mgtc6.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:46 [scrapy.extensions.logstats] INFO: Crawled 90 pages (at 27 pages/min), scraped 0 items (at 0 items/min)
+2017-08-31 20:28:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/006HcaCrgy1fj1x6ny7duj30jg0jggo9.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/0065BKd5gy1fj11eb9utkj30zk0qpn5d.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/661eb95cly1fj1whpzhdhj20qo0zkwsc.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:46 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in http://ws1.sinaimg.cn/large/006HcaCrgy1fj2rvlwvmsg30eh0c8e82.gif. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2017-08-31 20:28:46 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://ws1.sinaimg.cn/large/006HcaCrgy1fj2rvlwvmsg30eh0c8e82.gif> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>, <twisted.python.failure.Failure twisted.web.http._DataLoss: >]
+2017-08-31 20:28:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/91e9ebb3gy1fixbn9zy0gg2060095nnq.gif> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:46 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/006HcaCrgy1fj1rxx0qbtj30hs0hs400.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:28:46 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx4.sinaimg.cn/large/006HcaCrgy1fj1rx3xk0sj30k00kxjsx.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:28:46 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/0069hRx7ly1fizr5mnhnjj30qi0uy0x2.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:28:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jandan.net/ooxx/page-292#comments> (referer: http://jandan.net/ooxx/page-293)
+2017-08-31 20:28:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws1.sinaimg.cn/large/006HcaCrgy1fj1rxgzrzij30f00qowg3.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/006HcaCrgy1fj1s108bezj30go0sx0ur.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/7dcd6f08gy1fj1srhh6rxj20jg0t6jt6.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/006HcaCrgy1fj1ry7ym87j30qb0jrad4.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:57 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/5c660d82ly1fj1kp6qnqfj21z41bek53.jpg> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:28:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws4.sinaimg.cn/large/006HcaCrgy1fj1rylctdcj30u011hjvk.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:28:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jandan.net/ooxx/page-291#comments> (referer: http://jandan.net/ooxx/page-292)
+2017-08-31 20:29:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/5c660d82ly1fj1kpjd8u4j21hc0u0771.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:29:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws2.sinaimg.cn/large/006HcaCrgy1fj1ryvs5lcj30f00ezahu.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:29:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/006HcaCrgy1fj1rzhc9ylj30jz0zk44w.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:29:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jandan.net/ooxx/page-290#comments> (referer: http://jandan.net/ooxx/page-291)
+2017-08-31 20:29:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws3.sinaimg.cn/large/5c660d82ly1fj1kon0mpgj21hc0u043o.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:29:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/661eb95cly1fj1whqjsulj20mo0y6h99.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:29:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/006HcaCrgy1fj10s9rhjuj30mr11275l.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:29:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws3.sinaimg.cn/large/006HcaCrgy1fj10qsc8sqj30ku0q176l.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:29:19 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx3.sinaimg.cn/large/661eb95cgy1fizvup5lzig20dc06y4qs.gif> (failed 1 times): 502 Bad Gateway
+2017-08-31 20:29:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jandan.net/ooxx/page-289#comments> (referer: http://jandan.net/ooxx/page-290)
+2017-08-31 20:29:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws3.sinaimg.cn/large/006HcaCrgy1fj13629t5bj30l40f8gnq.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:29:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx2.sinaimg.cn/large/006HcaCrgy1fj0qdldz6dj30im0n8q4y.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:29:30 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in http://wx2.sinaimg.cn/large/006HcaCrgy1fj2ihrb5fbg30bk09l4qt.gif. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2017-08-31 20:29:30 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://wx2.sinaimg.cn/large/006HcaCrgy1fj2ihrb5fbg30bk09l4qt.gif> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>, <twisted.python.failure.Failure twisted.web.http._DataLoss: >]
+2017-08-31 20:29:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jandan.net/ooxx/page-288#comments> (referer: http://jandan.net/ooxx/page-289)
+2017-08-31 20:29:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws2.sinaimg.cn/large/006HcaCrgy1fj0kk7yod8j30el0fi74y.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:29:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/006HcaCrgy1fj0kkivs5bj306y06yaa4.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:29:40 [scrapy.extensions.logstats] INFO: Crawled 115 pages (at 25 pages/min), scraped 0 items (at 0 items/min)
+2017-08-31 20:29:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/91e9ebb3gy1fj0s2h52d8g20dc07h4ir.gif> (referer: http://jandan.net/ooxx)
+2017-08-31 20:29:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jandan.net/ooxx/page-287#comments> (referer: http://jandan.net/ooxx/page-288)
+2017-08-31 20:29:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws1.sinaimg.cn/large/006HcaCrgy1fj0klfiwk4j30dw0jzwg0.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:29:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wx1.sinaimg.cn/large/006HcaCrgy1fj2ihad6bog309109l1ky.gif> (referer: http://jandan.net/ooxx)
+2017-08-31 20:29:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ws4.sinaimg.cn/large/57aa2bdfgy1fj25vy9jn5j20pp3bfqv5.jpg> (referer: http://jandan.net/ooxx)
+2017-08-31 20:29:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jandan.net/ooxx/page-286#comments> (referer: http://jandan.net/ooxx/page-287)
+2017-08-31 20:29:54 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
